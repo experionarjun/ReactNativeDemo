@@ -12,7 +12,6 @@ import {
   Text,
   View,
   TextInput,
-  Navigator,
   Button
 } from 'react-native';
 
@@ -26,8 +25,7 @@ export default class ReactDemo extends Component {
  }
   login(usr,pass){
     if(usr == 'arjun' && pass == 'l00p123'){
-      // Alert.alert('Successful')
-      Navigator.push(Home);
+      Alert.alert('Successful')
     }else{
       Alert.alert('Invalid');
     }
