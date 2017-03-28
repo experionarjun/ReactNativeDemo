@@ -1,14 +1,10 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 
+import {getAPI} from '../../utils/api.service'
+
+
 import {
-  AppRegistry,
   Alert,
   StyleSheet,
   Text,
@@ -17,7 +13,8 @@ import {
   Button
 } from 'react-native';
 
-import Home from '../home/home.js'
+// const url = '../../assets/login.json'
+// const url = 'https://exptest.herokuapp.com/api/login'; <---INPUT = userName= demo@experionglobal.com& password= exp@123
 
 export default class Login extends Component {
   constructor(props) {
@@ -25,13 +22,20 @@ export default class Login extends Component {
    this.state = { username: 'Name',
                   password:'Password'};
  }
-  login(usr,pass){
+
+login(usr,pass){
+  //====================API=====================
+    // getAPI(url).then((data)=>{
+    //   console.log('res',data)
+    // });
+//================================================
     if(usr == 'arjun' && pass == 'l00p123'){
-      Actions.home();
-    }else{
-      Alert.alert('Invalid');
-    }
-  }
+        Actions.home();
+      }else{
+        Alert.alert('Invalid');
+      }
+}
+
   render() {
     return (
       <View style={styles.container}>
@@ -57,8 +61,6 @@ export default class Login extends Component {
       </View>
     );
   }
-
-
 }
 
 const styles = StyleSheet.create({
