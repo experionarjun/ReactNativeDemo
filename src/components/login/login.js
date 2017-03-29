@@ -6,13 +6,14 @@ import {getAPI} from '../../utils/api'
 
 import {
   Alert,
+  StyleSheet,
   Text,
   View,
   TextInput,
   Button
 } from 'react-native';
 
-import styles from '../../utils/styles'
+import styles from '../../utils/styles.js'
 
 // const url = '../../assets/login.json'
 // const url = 'https://exptest.herokuapp.com/api/login'; <---INPUT = userName= demo@experionglobal.com& password= exp@123
@@ -39,7 +40,7 @@ login(usr,pass){
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.centreContainer}>
         <Text style={styles.welcome}>
           Login!
         </Text>
@@ -63,4 +64,3 @@ login(usr,pass){
     );
   }
 }
-
