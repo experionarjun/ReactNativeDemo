@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 
 import {
-  StyleSheet,
   Text,
   View,
   ListView
 } from 'react-native';
 
-import {getAPI} from '../../utils/api.service'
+import styles from '../../utils/styles'
+import {getAPI} from '../../utils/api'
 
 const url='https://www.reddit.com/r/movies/top.json?limit=5'
 
@@ -48,18 +48,3 @@ export default class Home extends Component {
   }
  }
 
-
- const styles = StyleSheet.create({
-   container: {
-     flex: 1,
-     padding: 10,
-     alignItems: 'center',
-     backgroundColor: '#F5FCFF',
-   },
-   welcome: {
-     fontSize: 20,
-     textAlign: 'center',
-     margin: 10,
-   }
-
- });

@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 
-import {getAPI} from '../../utils/api.service'
+import {getAPI} from '../../utils/api'
 
 
 import {
   Alert,
-  StyleSheet,
   Text,
   View,
   TextInput,
   Button
 } from 'react-native';
+
+import styles from '../../utils/styles'
 
 // const url = '../../assets/login.json'
 // const url = 'https://exptest.herokuapp.com/api/login'; <---INPUT = userName= demo@experionglobal.com& password= exp@123
@@ -63,20 +64,3 @@ login(usr,pass){
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  textbox: {
-    height: 40,
-    width: 300,
-  },
-});
