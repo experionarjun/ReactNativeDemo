@@ -41,8 +41,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   listView: {
-    borderLeft: 4,
-    borderBottomColor: '#333',
+    
   }
 });
 
